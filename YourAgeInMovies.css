@@ -1,8 +1,8 @@
 .topnav {
   overflow: hidden;
-  font-family: 'Lato';
+  /*font-family: 'Lato';*/
   font-weight: 900;
-  color: blue;
+  color: black;
   padding-right: 2em;
 }
 
@@ -10,13 +10,13 @@
 .topnav a {
   margin-top: 1em;
   margin-right: 1em;
+  color: #FFACFC;
   float: right;
   display: block;
   text-align: center;
   padding: 1em 1em;
   text-decoration: none;
   font-size: 1em;
-  color: black;
 }
 
 .topnav a:hover {
