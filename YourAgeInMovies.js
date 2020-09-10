@@ -6,6 +6,12 @@ request.open('GET', 'http://www.omdbapi.com/?apikey=30700e4c&', true)
 
 request.onload = function () {
   // Begin accessing JSON data here
+  var data = JSON.parse(this.response)
+
+data.forEach((movie) => {
+  // Log each movie's title
+  console.log(movie.t)
+})
 }
 
 // Send request
