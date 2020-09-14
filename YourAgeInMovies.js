@@ -1,8 +1,8 @@
-const MediaType = {Episode:'episode', Movie:'movie', Series:'series',};
+const MediaType = {Episode:'episode', Movie:'movie', Series:'series'};
 jQuery( document ).ready( function initialize()
 {
-	jQuery( '#searchText, #searchYear' )
-	.on( 'change', function( _evt )
+	jQuery( '#selectionButton' )
+	.on( 'click', function( _evt )
 	{
 		let ajaxData = {apikey:'30700e4c', v:1, type:MediaType.Movie,};
 
@@ -98,5 +98,5 @@ jQuery( document ).ready( function initialize()
 	jQuery( '#searchText' ).val( 'It' );
 	jQuery( '#searchYear' ).val( 1996 );
 	// Trigger query.
-	jQuery( '#searchYear' ).trigger( 'change' );
+	jQuery( '#selectionButton' ).on( 'click' );
 });
