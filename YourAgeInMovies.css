@@ -8,6 +8,17 @@
   border-bottom: 1px solid black;*/
 }
 
+#movieInfoBox {
+  background-color: red;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+#movieInfoVertical {
+  display: flex;
+  flex-direction: column;
+}
 
 .topnav a {
   margin-top: 1em;

@@ -81,7 +81,14 @@ jQuery( document ).ready( function initialize()
 						// 	imdbVotes: ""
 						// }
 						console.log( "Success!" );
-						alert( `"${filmDetail.Title}"` );
+						//alert( `Title: ${filmDetail.Title}\r\nPlot: ${filmDetail.Plot}` );
+            displayMovieInfo();
+
+            function displayMovieInfo(){
+                document.getElementById('moviePosterPlaceholder').src = filmDetail.Poster;
+                document.getElementById('movieTitlePlaceholder').innerHTML = filmDetail.Title;
+                document.getElementById('movieBioPlaceholder').innerHTML = filmDetail.Plot;
+            }
 					}
 				}
 			}
@@ -98,5 +105,7 @@ jQuery( document ).ready( function initialize()
 	jQuery( '#searchText' ).val( 'It' );
 	jQuery( '#searchYear' ).val( 1996 );
 	// Trigger query.
-	jQuery( '#selectionButton' ).on( 'click' );
+	//jQuery( '#selectionButton' ).on( 'click' );
+
+
 });
