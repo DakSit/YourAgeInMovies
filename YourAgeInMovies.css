@@ -25,7 +25,6 @@
 }
 
 #movieInfoBox {
-  background-color: red;
   display: none;
   text-align: center;
   justify-content: space-between;
@@ -36,6 +35,7 @@
 
 
 #movieInfoVertical {
+  background-color: white;
   display: flex;
   flex-direction: column;
 }

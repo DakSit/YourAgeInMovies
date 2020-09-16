@@ -3,12 +3,22 @@ jQuery( document ).ready( function initialize()
 {
   //$("#movieInfoBox").hide();
 	jQuery( '#selectionButton' )
-	.on( 'click', function( _evt )
+	.on( 'click', function movieProc( _evt )
 	{
 		let ajaxData = {apikey:'30700e4c', v:1, type:MediaType.Movie,};
 
 		// Gather options.
-		let searchText = jQuery('#searchText').val();
+    function makeid(length) {
+      var result           = '';
+      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var charactersLength = characters.length;
+      for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+   return result;
+}
+		let searchText = makeid(1);//jQuery('#searchText').val();
+
 		ajaxData.y = jQuery('#searchYear').val();
 		ajaxData.page = 1;
 		if( searchText.length < 3 )
@@ -56,6 +66,12 @@ jQuery( document ).ready( function initialize()
 					else
 					{
 						const filmDetail = response;
+            /*console.log(filmDetail.imdbRating);
+            if (filmDetail.imdbRating < 9)
+              {
+                console.log('oof');
+                movieProc( _evt )
+              }*/
 						// response: {
 						// 	Actors: ""
 						// 	Awards: ""
