@@ -17,16 +17,16 @@
 <body>
   <div class="topnav" id="myTopnav">
     <a href="" class="active">How was this made?</a>
-	<a href="" class="active">Change Year</a>
   </div>
+<div id="centerContent">
 <div class="infoBlock" id="infoBlock">
-  <label for="searchText">Search</label>
+  <label for="searchText" class="searchBlock">Search</label>
   <input type="search" id="searchText" name="searchText" minlength="1"/>
-  <label for="searchYear">Year</label>
+  <label for="searchYear" class="searchBlock">Year</label>
   <input type="number" id="searchYear" name="searchYear" min="1900" max="2099" step="1"/>
   <button type="button" id="selectionButton">Enter Year</button>
 </div>
-<div class="movieInfoBox" id="movieInfoBox">
+<div class="hidden movieInfoBox" id="movieInfoBox">
   <div id="moviePosterArea">
     <img id="moviePosterPlaceholder" src="#"></img>
   </div>
@@ -34,10 +34,14 @@
     <div id="movieTitleArea">
       <p id="movieTitlePlaceholder">Placeholder</p>
     </div>
+    <div id="movieRatingArea">
+      <p>Rating: <span id="movieRatingPlaceholder">Placeholder</span></p>
+    </div>
     <div id = "movieBioArea">
       <p id="movieBioPlaceholder">Placeholder</p>
     </div>
+
   </div>
 </div>
-
+</div>
 </body>

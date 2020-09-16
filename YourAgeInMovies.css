@@ -8,12 +8,32 @@
   border-bottom: 1px solid black;*/
 }
 
+#centerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#movieRatingPlaceholder {
+  display: inline-block;
+}
+
+.searchBlock {
+  margin-right: .5em;
+  margin-left: .5em;
+}
+
 #movieInfoBox {
   background-color: red;
-  display: flex;
+  display: none;
   text-align: center;
   justify-content: space-between;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 #movieInfoVertical {
   display: flex;
@@ -44,9 +64,5 @@
    align-content: center;
    margin-left: auto;
    margin-right: auto;
-}
-
-.body {
-  display: flex;
-  align-content: center;
+   margin-bottom: 1em;
 }

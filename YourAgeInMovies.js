@@ -1,6 +1,7 @@
 const MediaType = {Episode:'episode', Movie:'movie', Series:'series'};
 jQuery( document ).ready( function initialize()
 {
+  //$("#movieInfoBox").hide();
 	jQuery( '#selectionButton' )
 	.on( 'click', function( _evt )
 	{
@@ -37,6 +38,7 @@ jQuery( document ).ready( function initialize()
 					{
 						console.log( "Success!" );
 						let formatted = response.Search
+            /*
 						.filter( function omitResults( filmSummary )
 						{
 							return !!filmSummary.Poster;
@@ -48,6 +50,7 @@ jQuery( document ).ready( function initialize()
 						})
 						.join( "\n" );
 						alert( formatted );
+            */
 					}
 					// One result.
 					else
@@ -83,10 +86,11 @@ jQuery( document ).ready( function initialize()
 						console.log( "Success!" );
 						//alert( `Title: ${filmDetail.Title}\r\nPlot: ${filmDetail.Plot}` );
             displayMovieInfo();
-
+            document.getElementById("movieInfoBox").style.display = "flex";
             function displayMovieInfo(){
                 document.getElementById('moviePosterPlaceholder').src = filmDetail.Poster;
                 document.getElementById('movieTitlePlaceholder').innerHTML = filmDetail.Title;
+                document.getElementById('movieRatingPlaceholder').innerHTML = filmDetail.imdbRating;
                 document.getElementById('movieBioPlaceholder').innerHTML = filmDetail.Plot;
             }
 					}
@@ -102,7 +106,7 @@ jQuery( document ).ready( function initialize()
 			console.error( "Failure: ", exc );
 		});
 	})
-	jQuery( '#searchText' ).val( 'It' );
+	jQuery( '#searchText' ).val( '' );
 	jQuery( '#searchYear' ).val( 1996 );
 	// Trigger query.
 	//jQuery( '#selectionButton' ).on( 'click' );
